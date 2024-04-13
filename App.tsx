@@ -1,11 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar, StyleSheet, Text, View } from 'react-native';
+import Logo from './src/assets/logo.svg';
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <Logo width={180} height={45} />
       <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <StatusBar translucent barStyle='dark-content' backgroundColor="transparent" />
     </View>
   );
 }
