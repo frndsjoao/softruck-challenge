@@ -1,21 +1,21 @@
-import { StatusBar, StyleSheet, Text, View } from 'react-native';
-import Logo from './src/assets/logo.svg';
+import { Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
+import { useState } from 'react';
+import { ActivityIndicator, StatusBar } from 'react-native';
+import { ThemeProvider } from 'styled-components/native';
+import Routes from './src/routes';
+import theme from './src/theme';
 
 export default function App() {
+  const [fontsLoaded] = useState({ Roboto_400Regular, Roboto_700Bold })
+
   return (
-    <View style={styles.container}>
-      <Logo width={180} height={45} />
-      <Text>Open up App.js to start working on your app!</Text>
+    <>
       <StatusBar translucent barStyle='dark-content' backgroundColor="transparent" />
-    </View>
+      {fontsLoaded ? (
+        <ThemeProvider theme={theme}>
+          <Routes />
+        </ThemeProvider>
+      ) : <ActivityIndicator />}
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
