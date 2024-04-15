@@ -18,7 +18,9 @@ export default {
     BLUE_800: '#02214b',
     BLUE_900: '#011026',
 
-    SALMON: '#FF7566'
+    SALMON: '#FF7566',
+    GREEN: '#198754',
+    RED: '#E53935',
   },
   FONT_SIZE: {
     XS: 12,
@@ -32,5 +34,6 @@ export default {
   FONT_FAMILY: {
     REGULAR: 'Roboto_400Regular',
     BOLD: 'Roboto_700Bold',
+    ITALIC: 'Roboto_400Regular_Italic',
   }
 }

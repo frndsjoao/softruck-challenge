@@ -19,3 +19,13 @@ export const IconWrapper = styled.View`
   border-radius: 32px;
   padding: 4px;
 `
+
+export const ReturnIconWrapper = styled.TouchableOpacity`
+  background-color: transparent;
+  margin-right: 8px;
+`
+
+export const LogoWrapper = styled.View`
+  flex-direction: row;
+  align-items: center;
+`

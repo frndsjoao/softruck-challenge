@@ -1,23 +1,19 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View } from 'react-native';
+import { VehicleType } from '../../@types/vehicle';
 import { formatLicensePlate } from '../../utils/formatLicensePlate';
 import { Container, Image, Model, Plate } from './styles';
 
 interface VehicleCardProps {
-  data: {
-    plate: string;
-    vin: string;
-    color: string;
-    picture?: { address?: string }
-  }
+  data: VehicleType
 }
 
 export default function VehicleCard({ data }: VehicleCardProps) {
   const navigation = useNavigation()
 
   function handleVehicleRoutes() {
-    navigation.navigate('vehicleRoutes', { plate: data.plate })
+    navigation.navigate('vehicleRoutes', { data: data })
   }
 
   return (

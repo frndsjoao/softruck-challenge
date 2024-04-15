@@ -1,26 +1,48 @@
-import { RouteProp, useNavigation } from '@react-navigation/native'
-import React from 'react'
-import { Text, TouchableOpacity, View } from 'react-native'
-import { RoutesProps } from '../../@types/navigation'
+import { RouteProp } from '@react-navigation/native';
+import React from 'react';
+import { FlatList, View } from 'react-native';
+import response from '../../../frontend_data_gps.json';
+import { RoutesProps } from '../../@types/navigation';
+import CourseCard from '../../components/CourseCard';
+import Header from '../../components/Header';
+import { formatDistance } from '../../utils/formatDistance';
+import { formatLicensePlate } from '../../utils/formatLicensePlate';
+import { Container, Divider, EmptyList, Image, VehicleBoldDescription, VehicleDescription, VehicleInformation, VehicleTitle } from './styles';
 
-type RouteDetailScreenProp = RouteProp<RoutesProps, 'vehicleRoutes'>
-type RouteDetailProps = {
-  route: RouteDetailScreenProp
+type VehicleRoutesScreenProp = RouteProp<RoutesProps, 'vehicleRoutes'>
+type VehicleRoutesProps = {
+  route: VehicleRoutesScreenProp
 }
 
-export default function VehicleRoutesScreen({ route }: RouteDetailProps) {
-  const { plate } = route.params
-
-  const navigation = useNavigation()
+export default function VehicleRoutesScreen({ route }: VehicleRoutesProps) {
+  const { data } = route.params
 
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>vehicleRoutes</Text>
-      <Text>{plate}</Text>
+    <>
+      <Header canGoBack />
 
-      <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Text>Go back to Home</Text>
-      </TouchableOpacity>
-    </View>
+      <Container>
+        <VehicleInformation>
+          <Image source={{ uri: data.picture?.address }} />
+          <View>
+            <VehicleTitle>{formatLicensePlate(data.plate)}</VehicleTitle>
+            <VehicleDescription>Car model XYZ 2.0</VehicleDescription>
+            <VehicleDescription>Distância percorrida: {formatDistance(response.total_distance)}</VehicleDescription>
+            <VehicleBoldDescription>Total de percursos: {response.num_courses}</VehicleBoldDescription>
+          </View>
+        </VehicleInformation>
+
+        <Divider />
+
+        <FlatList
+          data={response.courses}
+          keyExtractor={(item) => item.start_at}
+          renderItem={({ item }) => <CourseCard data={item} />}
+          contentContainerStyle={{ paddingBottom: 120 }}
+          ListEmptyComponent={() => <EmptyList>Você ainda não realizou percursos com este veículo.</EmptyList>}
+        />
+
+      </Container>
+    </>
   )
 }
