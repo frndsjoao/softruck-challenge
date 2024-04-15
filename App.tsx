@@ -1,12 +1,12 @@
-import { Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
-import { useState } from 'react';
+import { Roboto_400Regular, Roboto_700Bold, useFonts } from '@expo-google-fonts/roboto';
 import { ActivityIndicator, StatusBar } from 'react-native';
+import 'react-native-gesture-handler';
 import { ThemeProvider } from 'styled-components/native';
 import Routes from './src/routes';
 import theme from './src/theme';
 
 export default function App() {
-  const [fontsLoaded] = useState({ Roboto_400Regular, Roboto_700Bold })
+  const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold })
 
   return (
     <>

@@ -1,7 +1,10 @@
 export default {
   COLORS: {
     WHITE: '#FFFFFF',
+    OFF_WHITE: '#F8FBFE',
     BLACK: '#0B0C0F',
+
+    LIGHT_GRAY: '#F5F6F7',
     GRAY: '#9DA2AF',
 
     BLUE_50: '#d6e2f4',
