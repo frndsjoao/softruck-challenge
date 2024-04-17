@@ -6,13 +6,13 @@ interface BottomSheetProps {
 }
 
 export default function BottomSheetComponent({ children }: BottomSheetProps) {
-  const snapPoints = useMemo(() => ['10%', '25%', '37.5%'], []);
+  const snapPoints = useMemo(() => ['10%', '25%', '50%'], []);
   const bottomSheetModalRef = useRef<BottomSheet>(null);
 
   return (
     <BottomSheet
       ref={bottomSheetModalRef}
-      index={1}
+      index={0}
       snapPoints={snapPoints}
     >
       {children}

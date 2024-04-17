@@ -19,7 +19,7 @@ export const ReturnButton = styled.TouchableOpacity`
 export const MapView = styled.View`
   background-color: antiquewhite;
   width: 100%;
-  height: 90%;
+  height: 85%;
 `
 
 export const BottomSheetContainer = styled.View`
@@ -32,7 +32,7 @@ export const Title = styled.Text`
   font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
 `
 
-export const AddressWrapper = styled.View`
+export const AddressWrapper = styled.TouchableOpacity`
   flex-direction: row;
   align-items: flex-start;
   gap: 12px;

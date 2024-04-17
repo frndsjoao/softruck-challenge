@@ -33,7 +33,7 @@ export default function CourseCard({ data }: CourseCardProps) {
       <AddressWrapper>
         <Icon name='location-pin' size={16} color={COLORS.RED} />
         <AddressContent>
-          <AddressType>Chegada</AddressType>
+          <AddressType>Destino</AddressType>
           <Address>{endAddress}</Address>
         </AddressContent>
       </AddressWrapper>

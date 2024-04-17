@@ -20,3 +20,8 @@ type GpsType = {
   acquisition_time: string;
   address?: string;
 }
+
+export type Coordinates = {
+  latitude: number
+  longitude: number
+}
