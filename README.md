@@ -64,12 +64,11 @@ $ npx expo start
 
 ## Processo de desenvolvimento:
 <p>
-  1) Inicialização do repositório e configuração do Expo utilizando Typescript;
-  2) Inclusão do React Navigation, criação das rotas e configuração do tema pelo Styled Components. Nessa parte, as rotas foram planejadas em um papel mesmo, e o tema utilizado foi baseado no site da Softruck, utilizando os mesmos padrões de cores;
-  3) Desenvolvimento de telas e componentes: Como as rotas já haviam sido planejadas, foi possível desenvolver as telas baseado no que cada tela deveria possuir. Os componentes foram criados baseado na possibilidade de reutilização de código, evitando a repetição e facilitando a manutenção;
-  4) Após todas as telas terem sido desenvolvidas, iniciei o processo de integração com o React Native Maps e React Native Maps Directions. Nessa parte, foi necessário realizar um cálculo matemático para que o sprite do veículo ficasse alinhado com a direção via arquivo JSON. Se a direção fosse entre 0 e 45 graus, o veículo seria apontado para o norte, e assim por diante;
+  1) Inicialização do repositório e configuração do Expo utilizando Typescript; </br>
+  2) Inclusão do React Navigation, criação das rotas e configuração do tema pelo Styled Components. Nessa parte, as rotas foram planejadas em um papel mesmo, e o tema utilizado foi baseado no site da Softruck, utilizando os mesmos padrões de cores; </br>
+  3) Desenvolvimento de telas e componentes: Como as rotas já haviam sido planejadas, foi possível desenvolver as telas baseado no que cada tela deveria possuir. Os componentes foram criados baseado na possibilidade de reutilização de código, evitando a repetição e facilitando a manutenção; </br>
+  4) Após todas as telas terem sido desenvolvidas, iniciei o processo de integração com o React Native Maps e React Native Maps Directions. Nessa parte, foi necessário realizar um cálculo matemático para que o sprite do veículo ficasse alinhado com a direção via arquivo JSON. Se a direção fosse entre 0 e 45 graus, o veículo seria apontado para o norte, e assim por diante; </br>
   5) Inclusão do i18n para internacionalização dos textos apresentados no aplicativo;
-
 </p>
 
 ## Sugestões:
