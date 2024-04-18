@@ -1,7 +1,9 @@
 {
   "login": {
     "softruckSpan": "Reinventing vehicle tracking",
-    "selectLanguage": "Select your language:",
+    "logoutMsg": "Do you really want to leave?",
+    "logoutBtnCancel": "Cancel",
+    "logoutBtnConfirm": "Yes",
     "signIn": "Sign in"
   },
   "home": {

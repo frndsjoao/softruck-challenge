@@ -12,7 +12,11 @@ export const HeaderContainer = styled.View`
   border-bottom-color: ${({ theme }) => theme.COLORS.BLUE_50};
 `
 
-export const DrawerMenu = styled.View``
+export const HeaderButtons = styled.View`
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+`
 
 export const IconWrapper = styled.View`
   background-color: ${({ theme }) => theme.COLORS.GRAY};

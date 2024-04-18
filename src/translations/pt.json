@@ -1,7 +1,9 @@
 {
   "login": {
     "softruckSpan": "Reinventando o rastreamento veicular",
-    "selectLanguage": "Select your language:",
+    "logoutMsg": "Deseja mesmo sair?",
+    "logoutBtnCancel": "Cancelar",
+    "logoutBtnConfirm": "Sim",
     "signIn": "Acessar"
   },
   "home": {
