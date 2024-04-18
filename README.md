@@ -39,6 +39,14 @@ Tecnologias que escolhi para o desenvolvimento do app:
 $ git clone https://github.com/frndsjoao/softruck-challenge.git && cd softruck-challenge
 ```
 
+**Adicione uma Google Maps API Key**
+
+```bash
+# Na raíz do projeto, inclua a sua Google Maps API Key no arquivo .env, conforme exemplo:
+#
+#EXPO_PUBLIC_GOOGLE_MAPS_API_KEY=123ASD456...
+```
+
 **Instale as dependências e execute o projeto**
 
 ```bash
