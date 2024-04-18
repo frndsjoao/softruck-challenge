@@ -1,0 +1,28 @@
+{
+  "login": {
+    "softruckSpan": "Reinventando o rastreamento veicular",
+    "selectLanguage": "Select your language:",
+    "signIn": "Acessar"
+  },
+  "home": {
+    "search": "Buscar veículos",
+    "categoryTitle": "Veículos",
+    "emptyCategoryList": "Você ainda não tem veículos cadastrados."
+  },
+  "vehicleRoutes": {
+    "travelLog": "Distância percorrida: ",
+    "totalRoutes": "Total de percursos: ",
+    "departure": "Partida",
+    "destination": "Destino",
+    "emptyRoutesList": "Você ainda não realizou percursos com este veículo."
+  },
+  "routeDetail": {
+    "route": "Percurso",
+    "touchAnimation": "Toque no endereço de partida para visualizar a rota",
+    "bsDistance": "Distância",
+    "bsDuration": "Duração",
+    "bsStops": "Paradas",
+    "bsAvgSpeed": "Velocidade média",
+    "bsMaxSpeed": "Velocidade máxima"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "login": {
+    "softruckSpan": "Reinventing vehicle tracking",
+    "selectLanguage": "Select your language:",
+    "signIn": "Sign in"
+  },
+  "home": {
+    "search": "Search vehicles plates",
+    "categoryTitle": "Vehicles",
+    "emptyCategoryList": "You do not have any registered vehicles."
+  },
+  "vehicleRoutes": {
+    "travelLog": "Travelled distance: ",
+    "totalRoutes": "Total routes: ",
+    "departure": "Departure",
+    "destination": "Destination",
+    "emptyRoutesList": "You have not travelled with this vehicle yet."
+  },
+  "routeDetail": {
+    "route": "Route",
+    "touchAnimation": "Touch on the departure address to see the route",
+    "bsDistance": "Distance",
+    "bsDuration": "Duration",
+    "bsStops": "Stops",
+    "bsAvgSpeed": "Average speed",
+    "bsMaxSpeed": "Max speed"
+  }
+}

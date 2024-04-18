@@ -2,6 +2,7 @@ import Icon from '@expo/vector-icons/MaterialIcons'
 import { useNavigation } from '@react-navigation/native'
 import { useTheme } from 'styled-components/native'
 import { CourseType } from '../../@types/course'
+import { i18n } from '../../translations/i18n'
 import { Address, AddressContent, AddressType, AddressWrapper, Container } from './styles'
 
 interface CourseCardProps {
@@ -25,7 +26,7 @@ export default function CourseCard({ data }: CourseCardProps) {
       <AddressWrapper>
         <Icon name='circle' size={12} color={COLORS.GREEN} />
         <AddressContent>
-          <AddressType>Partida</AddressType>
+          <AddressType>{i18n.t('vehicleRoutes.departure')}</AddressType>
           <Address>{startAddress}</Address>
         </AddressContent>
       </AddressWrapper>
@@ -33,7 +34,7 @@ export default function CourseCard({ data }: CourseCardProps) {
       <AddressWrapper>
         <Icon name='location-pin' size={16} color={COLORS.RED} />
         <AddressContent>
-          <AddressType>Destino</AddressType>
+          <AddressType>{i18n.t('vehicleRoutes.destination')}</AddressType>
           <Address>{endAddress}</Address>
         </AddressContent>
       </AddressWrapper>

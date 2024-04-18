@@ -9,6 +9,7 @@ import { RoutesProps } from '../../@types/navigation'
 import BottomSheetComponent from '../../components/BottomSheet'
 import BottomSheetDetailCard from '../../components/BottomSheetDetailCard'
 import Map from '../../components/Map'
+import { i18n } from '../../translations/i18n'
 import { formatDistance } from '../../utils/formatDistance'
 import { formatDuration } from '../../utils/formatDuration'
 import { formatToHour } from '../../utils/formatToHour'
@@ -79,7 +80,7 @@ export default function RouteDetailScreen({ route }: RouteDetailProps) {
 
       <BottomSheetComponent>
         <BottomSheetContainer>
-          <Title>Percurso</Title>
+          <Title>{i18n.t('routeDetail.route')}</Title>
 
           <AddressWrapper onPress={() => updateCoordinates()}>
             <Icon name='circle' size={12} color={COLORS.BLUE_600} />
@@ -93,7 +94,7 @@ export default function RouteDetailScreen({ route }: RouteDetailProps) {
             <Hour>{formatToHour(data.end_at)}</Hour>
           </AddressWrapper>
 
-          <Span>Clique no endereço de partida para ver o trajeto.</Span>
+          <Span>{i18n.t('routeDetail.touchAnimation')}</Span>
           <Divider />
         </BottomSheetContainer>
 
@@ -103,31 +104,31 @@ export default function RouteDetailScreen({ route }: RouteDetailProps) {
           contentContainerStyle={{ paddingLeft: 20, paddingRight: 10 }}
         >
           <BottomSheetDetailCard
-            label="Distância"
+            label={i18n.t('routeDetail.bsDistance')}
             icon='map'
             value={formatDistance(data.distance)}
             color={COLORS.BLUE_600}
           />
           <BottomSheetDetailCard
-            label="Duração"
+            label={i18n.t('routeDetail.bsDuration')}
             icon="timer"
             value={formatDuration(data.duration)}
             color={COLORS.BLUE_500}
           />
           <BottomSheetDetailCard
-            label="Paradas"
+            label={i18n.t('routeDetail.bsStops')}
             icon="stop-circle"
             value={data.stops}
             color={COLORS.BLUE_400}
           />
           <BottomSheetDetailCard
-            label="Velocidade média"
+            label={i18n.t('routeDetail.bsAvgSpeed')}
             icon="speed"
             value={`${data.speed_avg.toFixed(1)}km/h`}
             color={COLORS.BLUE_300}
           />
           <BottomSheetDetailCard
-            label="Velocidade máxima"
+            label={i18n.t('routeDetail.bsMaxSpeed')}
             icon="speed"
             value={`${data.speed_max.toFixed(1)}km/h`}
             color={COLORS.BLUE_200}
