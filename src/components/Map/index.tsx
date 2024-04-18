@@ -15,6 +15,8 @@ interface MapProps {
   }
 }
 
+const googleMapsApiKey = process.env.EXPO_PUBLIC_GOOGLE_MAPS_API_KEY
+
 export default function Map({ path, data, currentCoordinate }: MapProps) {
   const { COLORS } = useTheme()
   const mapRef = useRef<MapView>(null)
@@ -59,7 +61,7 @@ export default function Map({ path, data, currentCoordinate }: MapProps) {
       <MapViewDirections
         origin={path.origin}
         destination={path.destination}
-        apikey='AIzaSyBY7KaZ475mXvGceWMLpxr2OLSUHC0HJK4'
+        apikey={`${googleMapsApiKey}`}
         strokeWidth={3}
         strokeColor={COLORS.BLUE_500}
         waypoints={waypoints}
